@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Survey Data</title>
+    <script>
+        function getParams() 
+        {
+
+            var idx = document.URL.indexOf('?');
+            var params = new Array();
+
+            if (idx != -1) 
+            {
+                var pairs = document.URL.substring(idx + 1, document.URL.length).split('&');
+                
+                for (var i = 0; i < pairs.length; i++) 
+                {
+
+                    nameVal = pairs[i].split('=');
+                    params[nameVal[0]] = nameVal[1];
+                }
+            }
+            return params;
+        }
+
+    params = getParams();
+    firstname = unescape(params["firstname"]);
+    middlename= unescape(params["middlename"]);
+    lastname = unescape(params["lastname"]);
+    snumber = unescape(params["snumber"]);
+	email = unescape(params["email"]);
+    gender = unescape(params["gender"]);
+    sdate = unescape(params["sdate"]);
+	gpa = unescape(params["gpa"]);
+    major = unescape(params["major"]);
+    comments = unescape(params["comments"]);
+
+    document.write("firstname = " + firstname + "<br>");
+    document.write("middlename = " + middlename + "<br>");
+    document.write("lastname = " + lastname + "<br>");
+    document.write("snumber = " + snumber + "<br>");
+    document.write("email = " + email + "<br>");
+    document.write("gender = " + gender + "<br>");
+    document.write("sdate = " + sdate + "<br>");
+    document.write("gpa = " + gpa + "<br>");
+    document.write("major = " + major + "<br>");
+    document.write("comments = " + comments + "<br>");
+    </script>
+
+
+</head>
+</html>

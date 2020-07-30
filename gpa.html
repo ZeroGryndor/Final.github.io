@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alex Mears - AUM</title>
+ <link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="img/New_AUMWarhawksLogo.jpg" width="180" height="168" alt="AUM" /></a> 
+   <img src="img/AUM_clear.png" alt="aum_logo" width="180" height="168" align="right" /></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="csp.html">Computer Science Program</a></li>
+      <li><a href="ta.html">Teaching Assistant</a></li>
+      <li><a href="gpa.html">GPA Calculator</a></li>
+    </ul>
+    <img src="img/orange-2.png" width="180" height="450" alt="orang binary" />
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>                
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    </div>
+  <div class="content">
+    <h1>Auburn University at Montgomery</h1>
+    <p>Want to calculate your college course grades? Our easy to use college GPA calculator will help you calculate your GPA and stay on top of your study grades in just minutes!  Convert your letter grade to numerical grade point average (A - 4.0, B - 3.0, C - 2.0, D - 1.0, F - 0).
+    <br>
+    <form>              
+                <input type="text" name="grade1" id="grade1"></input><br>
+                <input type="text" name="grade2" id="grade2"></input><br>
+                <input type="text" name="grade3" id="grade3"></input><br>
+                <input type="text" name="grade4" id="grade4"></input><br>
+        <input name="Submit" type="Button" onClick="Grade()" value="Submit"></input>
+      </form>
+            <script>
+                    function Grade()
+                    {  
+                        var grade1 = document.getElementById("grade1").value;
+                        var grade2 = document.getElementById("grade2").value;
+                        var grade3 = document.getElementById("grade3").value;
+                        var grade4 = document.getElementById("grade4").value;
+                        var i;
+                        var sum=0;
+
+                        var grades = [grade1, grade2, grade3, grade4];
+
+                        for (i = 0; i < grades.length; i++)
+                        {
+                            if(grades[i] == "A")
+                                sum += 4;
+                            if(grades[i] == "B")
+                                sum += 3;
+                            if(grades[i] == "C")
+                                sum += 2;
+                            if(grades[i] == "D")
+                                sum += 1;
+                            if(grades[i] == "F")
+                                sum += 0;
+                        }
+                        document.getElementById("sum").innerHTML = (sum/4);
+                    }       
+            </script>
+
+        <p>Your GPA for this semester is: </p>
+        <p id="sum"></p>
+    
+    
+    </p>
+
+    </div>
+  <div class="footer">
+    <p>
+    Alex Mears / CSCI 6970 Front-End Web Development
+   <a href="https://www.facebook.com/AUM-College-of-Sciences-Auburn-University-at-Montgomery-781423618600369/" target="_blank"><img src="img/facebook-social-network-logo.png" alt="facebook" width="32" height="32" align="right" /></a>
+   <a href="https://twitter.com/aumontgomery" target="_blank"><img src="img/twitter.png" alt="twitter" width="32" height="26" align="right" /></a>
+   <a href="https://www.instagram.com/auburnmontgomery/" target="_blank"><img src="img/pngguru.com.png" alt="instagram" width="32" height="32" align="right" /></a>
+   <a href="https://www.youtube.com/AuburnMontgomery"><img src="img/youtube.png" alt="Youtube" width="32" height="32" align="right" /></a><br /></p>
+   </div>
+  </div>
+</body>
+</html>
